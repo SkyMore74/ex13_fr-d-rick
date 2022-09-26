@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "cyberpunk";
+  src: url("../assets/Cyberpunk.ttf");
+}
+
+body {
+  padding: 10px 15px 0px 15px;
+}
+
+.banner {
+  height: 200px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.web_font {
+  color: #f9f93f;
+  text-shadow: 1px 1px 5px #35f727;
+  text-align: center;
+  background: linear-gradient(to right, #061822, #2b4e62);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.web_font > h1 {
+  font-family: "cyberpunk";
+  font-size: 8em;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  animation: pulse_text 2s infinite alternate ease-in-out;
+}
+
+.web_font > h1:hover {
+  cursor: pointer;
+}
+
+.google_font {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #35f727;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(37, 116, 30, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+}
+.google_font > h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.5em;
+}
+
+
+.lien_media i {
+  color: #35f727;
+  margin: 0px 7px;
+  /* Ajout pour l'animation */
+  transition: transform 500ms;
+}
+
+.lien_media i:hover {
+  transform: scale(2.5) rotate(35deg) translateY(10px);
+  text-shadow: 1px 1px 5px #000000;
+}
+
+/* ==========================
+    Menu
+   ======================== */
+.menu {
+    background: linear-gradient(to right, #061822, #2b4e62);
+    width: 500px;
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 10px 10px 15px 5px rgba(0,0,0,0.46);
+
+    position: absolute;
+    left: -470px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: transform 1000ms;
+}
+
+.menu:hover {
+    transform: translate(469px);
+}
+.menu:hover > .menu-icone {
+    transform: rotate(-180deg);
+}
+
+.menu-liste-item {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-liste-item li {
+    float: left;
+}
+.menu-liste-item li:hover {
+    background-color: #00fed1;
+    transform: skew(-25deg);
+}
+
+.menu-icone {
+    color: #f9f93f;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 1000ms
+}
+
+.menu-item {
+    display: inline-block;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #f9f93f;
+}
+.menu-item:hover {
+    color: #FF6EC7;
+    text-shadow: 2px 2px 5px #000;
+    transform: skew(25deg);
+    font-weight: 900;
+}
+
+
+@media (max-width: 1000px) {
+  .web_font {
+    padding-top: 20px;
+    height: 180px;
+  }
+
+  .web_font > h1 {
+    font-size: 6em;
+    margin-bottom: 0px;
+  }
+}
+
+@keyframes pulse_text {
+  0% {
+    text-shadow: 1px 1px 5px #35f727;
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 1px 1px 35px #35f727;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes color_change {
+  0% {
+    background-color: cyan;
+  }
+  50% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+
+
